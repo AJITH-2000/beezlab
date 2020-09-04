@@ -1,0 +1,33 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int len;
+    scanf("%d",&len);
+    int arr[len],max=-999;
+    for(int index=0;index<len;index++){
+        scanf("%d",&arr[index]);
+        if(max<arr[index])
+        {
+            max=arr[index];
+        }
+    }
+    
+    for(int num=1;num<=max;num++){
+        
+        int flag=0;
+        for(int index=0;index<len;index++){
+            if(num==arr[index]){
+                flag=1;
+            }
+        }
+        
+        if(flag==0){
+            printf("%d",num);
+        }
+    }
+    
+    
+    return 0;
+}
